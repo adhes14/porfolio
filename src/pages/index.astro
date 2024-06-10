@@ -6,6 +6,8 @@ import Icon from "../components/icons/Icon.astro";
 import Github from "../components/icons/GitHubIcon.astro";
 import Gmail from "../components/icons/GmailIcon.astro";
 import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import CodeIcon from "../components/icons/CodeIcon.astro";
 ---
 
 <Layout
@@ -13,7 +15,7 @@ import Experience from "../components/Experience.astro";
   description="This my website where I can show you how I work"
 >
   <main>
-    <section class="w-full mx-auto lg:w-[740px] py-44">
+    <SectionContainer class="pt-44 pb-20">
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
         Hi, I'm Adhemar <a
           href="https://www.linkedin.com/in/adhemar-duran-gahuincha/"
@@ -41,10 +43,11 @@ import Experience from "../components/Experience.astro";
           <Gmail class="w-6 h-6" /> adhemarduran@gmail.com
         </Icon>
       </nav>
-    </section>
+    </SectionContainer>
 
-    <section>
+    <SectionContainer>
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-2 items-center"><CodeIcon class="size-8" /> Work Experience</h2>
       <Experience />
-    </section>
+    </SectionContainer>
   </main>
 </Layout>
