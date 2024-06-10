@@ -1,0 +1,42 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    title: 'Senior Frontend Developer',
+    company: 'Flowbite',
+    location: 'Remote',
+    startDate: '2020',
+    endDate: 'Present',
+    description: 'Building the next generation of web applications with a focus on performance and user experience.',
+    inProgress: true,
+  },
+  {
+    title: 'Frontend Developer',
+    company: 'Upwork',
+    location: 'Remote',
+    startDate: '2018',
+    endDate: '2020',
+    description: 'Worked on a variety of projects for clients from all around the world.',
+    inProgress: false,
+  },
+  {
+    title: 'Web Developer',
+    company: 'Freelancer',
+    location: 'Remote',
+    startDate: '2016',
+    endDate: '2018',
+    description: 'Built websites and web applications for small businesses and startups.',
+    inProgress: false,
+  },
+];
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-6">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
