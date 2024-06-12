@@ -34,19 +34,19 @@ const {
     ></path></svg
   >
 </span>
-<h3 class="text-white flex items-center mb-1 text-lg font-semibold">
+<h3 class="text-white flex items-center mb-1 text-md lg:text-lg font-semibold">
   {title}, {company}
   {
     inProgress && (
-      <span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-green-800 ms-3">
+      <span class="text-xs lg:text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-green-800 ms-3">
         In progress
       </span>
     )
   }
 </h3>
-<time class="block mb-2 text-sm font-normal leading-none text-gray-500"
+<time class="block mb-2 text-xs lg:text-sm font-normal leading-none text-gray-500"
   >{location}, from {startDate} to {endDate}</time
 >
-<p class="mb-4 text-base font-normal text-gray-400 text-pretty">
+<p class="mb-4 text-xs lg:text-base font-normal text-gray-400 text-pretty">
   {description}
 </p>
