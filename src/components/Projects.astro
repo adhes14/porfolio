@@ -1,0 +1,66 @@
+---
+import AngularIcon from "./icons/AnuglarIcon.astro";
+import AngularMaterial from "./icons/AngularMaterial.astro";
+import NestJSIcon from "./icons/NestJSIcon.astro";
+import PostgreIcon from "./icons/PostgresIcon.astro";
+const TAGS = {
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#411a0c] text-white",
+    icon: AngularIcon,
+  },
+  ANGULAR_MATERIAL: {
+    name: "Angular Material",
+    class: "bg-blue-500 text-white",
+    icon: AngularMaterial,
+  },
+  NESTJS: {
+    name: "NestJS",
+    class: "bg-black text-red-500",
+    icon: NestJSIcon,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#2127a8] text-white",
+    icon: PostgreIcon,
+  },
+};
+const PROJECTS = [
+  {
+    title: "HR Hive",
+    description:
+      "This is a Human Resources Management System that helps companies manage their employees, payroll, and benefits. Friendly user interface and easy to use. Geolocation tracking attendance, and leave management are some of the features that make HR Hive a complete solution for companies.",
+    image: "/img/projects/hr_hive.webp",
+    link: "https://hr1.hivetencapital.com/",
+    github: "",
+    tags: [TAGS.ANGULAR, TAGS.ANGULAR_MATERIAL, TAGS.NESTJS, TAGS.POSTGRESQL],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, link, github, tags }) => (
+    <article class="text-gray-400 my-5">
+      <h3 class="text-blue-200 mb-1 text-md lg:text-lg font-semibold">
+        {title}
+      </h3>
+      <p class="text-pretty mb-1">{description}</p>
+      <ul class="flex gap-x-4 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+              <tag.icon class="size-4" /> {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <a href={link} target="_blank">
+        <img
+          class="rounded shadow-xl shadow-white/10"
+          src={image}
+          alt={title}
+        />
+      </a>
+    </article>
+  ))
+}

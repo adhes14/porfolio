@@ -8,6 +8,8 @@ import Gmail from "../components/icons/GmailIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import CodeIcon from "../components/icons/CodeIcon.astro";
+import JobIcon from "../components/icons/JobIcon.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -15,8 +17,10 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
   description="This my website where I can show you how I work"
 >
   <main class="px-3 lg:px-0">
-    <SectionContainer class="pt-32 lg:pt-44 pb-20">
-      <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10">
+    <SectionContainer class="pt-32 lg:pt-44 mt-0">
+      <h1
+        class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-10"
+      >
         Hi, I'm Adhemar <a
           href="https://www.linkedin.com/in/adhemar-duran-gahuincha/"
           target="_blank"
@@ -26,7 +30,14 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
         >
       </h1>
       <h2 class="text-white text-lg lg:text-2xl opacity-80 text-wrap">
-        I'm passionate about software development, specializing in <span class="text-orange-300/90">Web Development</span>. With a solid foundation and experience in various technologies, I am dedicated to crafting high-quality, reliable web applications. I pride myself on being <span class="text-orange-300/90">highly adaptable</span> and capable of <span class="text-orange-300/90">quickly learning</span> new technologies and processes. This adaptability allows me to continuously improve my skill set.
+        I'm passionate about software development, specializing in <span
+          class="text-orange-300/90">Web Development</span
+        >. With a solid foundation and experience in various technologies, I am
+        dedicated to crafting high-quality, reliable web applications. I pride
+        myself on being <span class="text-orange-300/90">highly adaptable</span>
+        and capable of <span class="text-orange-300/90">quickly learning</span> new
+        technologies and processes. This adaptability allows me to continuously improve
+        my skill set.
       </h2>
 
       <nav class="flex flex-wrap gap-x-2 gap-y-2 lg:gap-x-4 mt-5">
@@ -43,8 +54,21 @@ import CodeIcon from "../components/icons/CodeIcon.astro";
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2 class="text-white text-xl lg:text-2xl font-semibold mb-6 flex gap-x-2 items-center"><CodeIcon class="size-6 lg:size-8" /> Work Experience</h2>
+      <h2
+        class="text-white text-xl lg:text-2xl font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <JobIcon class="size-6 lg:size-8" /> Work Experience
+      </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2
+        class="text-white text-xl lg:text-2xl font-semibold mb-6 flex gap-x-2 items-center"
+      >
+        <CodeIcon class="size-6 lg:size-8" /> Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
