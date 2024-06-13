@@ -16,7 +16,7 @@ const TAGS = {
   },
   NESTJS: {
     name: "NestJS",
-    class: "bg-black text-red-500",
+    class: "bg-[#171616] text-red-500",
     icon: NestJSIcon,
   },
   POSTGRESQL: {
@@ -45,7 +45,7 @@ const PROJECTS = [
         {title}
       </h3>
       <p class="text-pretty mb-1">{description}</p>
-      <ul class="flex gap-x-4 flex-row mb-2">
+      <ul class="flex gap-2 flex-row mb-2 flex-wrap">
         {tags.map((tag) => (
           <li>
             <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
